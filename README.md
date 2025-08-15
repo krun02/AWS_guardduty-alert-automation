@@ -1,7 +1,7 @@
-# AWS_guardduty-alert-automation
+# ☁️🛡️AWS_guardduty-alert-automation
 This project implements a serverless security response workflow on AWS that automatically quarantines EC2 instances flagged in high-severity Amazon GuardDuty findings. It’s designed to showcase AWS security automation, detection engineering, and incident response skills.
 
-**Flow**
+**📜Flow**
 1) GuardDuty emits a finding  
 2) EventBridge rule (`source=aws.guardduty`) invokes Lambda  
 3) Lambda identifies affected EC2 (Describe* APIs)  
@@ -9,7 +9,7 @@ This project implements a serverless security response workflow on AWS that auto
 5) SNS sends notification; Lambda logs to CloudWatch
 
 
-**Technologies Used**
+**🛠️Technologies Used**
 | Technology                  | Purpose                                                                                  |
 |-----------------------------|------------------------------------------------------------------------------------------|
 | Amazon GuardDuty            | Continuous threat detection and monitoring for AWS accounts, workloads, and data.       |
@@ -23,7 +23,7 @@ This project implements a serverless security response workflow on AWS that auto
 | AWS Budgets (optional)      | Cost control and alerts to monitor free tier usage.                                      |
 
 
-**Security Highlights**
+**🔐Security Highlights**
 
 | Feature                   | Security Benefit                                                                 |
 |---------------------------|-----------------------------------------------------------------------------------|
@@ -37,9 +37,9 @@ This project implements a serverless security response workflow on AWS that auto
 
 
 
-**Architecture**
+**🏗️Architecture**
 
-**Screenshots**
+**📸Screenshots**
 | Item            | Description |
 |-----------------|-------------|
 | IAM Roles List  | Displays all IAM roles in the account, including the `gd-quarantine-lambda-role` created for the GuardDuty automation Lambda. |
@@ -53,7 +53,7 @@ This project implements a serverless security response workflow on AWS that auto
 
 | Item           | Description |
 |----------------|-------------|
-| IAM Dashboard  | Overview of IAM resources, showing total roles, policies, and security configuration in the account.                           |
+| IAM Dashboard  | Overview of IAM resources, showing total roles, policies, and security configuration in the account.                             |
 
 <img width="1509" height="586" alt="Screenshot 2025-08-15 at 3 16 18 PM" src="https://github.com/user-attachments/assets/588ae922-4bd0-4cd1-8c67-c8a1f677ea61" />
 
@@ -64,7 +64,7 @@ This project implements a serverless security response workflow on AWS that auto
 
 | Item          | Description |
 |---------------|-------------|
-| VPC Dashboard | Shows details of the default VPC (`vpc-0ba352dfcacd6a19f`) where the GuardDuty automation resources are running.                 |
+| VPC Dashboard | Shows details of the default VPC (`vpc-0ba352dfcacd6a19f`) where the GuardDuty automation resources are running.                   |
 
 <img width="1511" height="824" alt="Screenshot 2025-08-15 at 3 11 28 PM" src="https://github.com/user-attachments/assets/16e93fcf-8b24-4697-bd57-583134cd53a8" />
 
@@ -75,7 +75,7 @@ This project implements a serverless security response workflow on AWS that auto
 
 | Item                  | Description |
 |-----------------------|-------------|
-| Lambda Functions List | Lists the Lambda function `gd-quarantine-lambda` used to isolate EC2 instances on GuardDuty findings.                   |
+| Lambda Functions List | Lists the Lambda function `gd-quarantine-lambda` used to isolate EC2 instances on GuardDuty findings.                      |
 
 <img width="1510" height="826" alt="Screenshot 2025-08-15 at 3 09 05 PM" src="https://github.com/user-attachments/assets/7de05db0-a351-4b3b-b085-4b20f6cd72c3" />
 
@@ -86,8 +86,8 @@ This project implements a serverless security response workflow on AWS that auto
 
 | Item               | Description |
 |--------------------|-------------|
-| GuardDuty Summary  | Overview of GuardDuty status and findings, showing total findings and severity distribution.                               |
-
+| GuardDuty Summary  | Overview of GuardDuty status and findings, showing total findings and severity distribution.                                  |
+ 
 <img width="1504" height="837" alt="Screenshot 2025-08-15 at 3 04 22 PM" src="https://github.com/user-attachments/assets/2146f0c0-df48-4b8e-8832-a9d1d2e8a893" />
 
 
@@ -98,14 +98,25 @@ This project implements a serverless security response workflow on AWS that auto
 
 | Item                   | Description |
 |------------------------|-------------|
-| GuardDuty Findings List| Detailed list of GuardDuty findings, including a low-severity finding about root credential usage.                    |
+| GuardDuty Findings List| Detailed list of GuardDuty findings, including a low-severity finding about root credential usage.                       |
 
 <img width="1507" height="854" alt="Screenshot 2025-08-15 at 3 04 48 PM" src="https://github.com/user-attachments/assets/8d00356a-9a19-4ebe-b373-ea3e60c69398" />
 
 
 
 
+**🎯💡Key Skills Gained**
 
+Configure Amazon GuardDuty for threat detection.
+Automate incident response with EventBridge and Lambda.
+Apply network isolation using VPC Security Groups.
+Send real-time alerts via Amazon SNS.
+Implement least privilege IAM roles for security automation.
+Test safely with GuardDuty sample findings.
+
+
+**📄License**
+This project is intended solely for learning purposes and to showcase skills in a professional portfolio.
 
 
 
