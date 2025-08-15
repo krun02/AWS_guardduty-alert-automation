@@ -23,6 +23,8 @@ This project implements a serverless security response workflow on AWS that auto
 | AWS Budgets (optional)      | Cost control and alerts to monitor free tier usage.                                      |
 
 
+**Security Highlights**
+
 | Feature                   | Security Benefit                                                                 |
 |---------------------------|-----------------------------------------------------------------------------------|
 | Automated Threat Response | Instantly isolates compromised EC2 instances, reducing attacker dwell time.      |
@@ -32,6 +34,7 @@ This project implements a serverless security response workflow on AWS that auto
 | Comprehensive Logging     | CloudWatch logs provide full audit trails for investigations.                    |
 | Immediate Alerts          | SNS notifies security teams instantly for rapid follow-up.                       |
 | Safe Testing              | GuardDuty sample findings allow safe, controlled testing.                        |
+
 
 
 **Architecture**
